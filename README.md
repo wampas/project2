@@ -40,7 +40,7 @@ The following gems require configuration: rspec, capybara, devise
 * Add the following to `config/environments/development.rb`:
 `Paperclip.options[:command_path] = "/usr/local/bin/"`
 * Add the following to the appropriate model:
-`has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"`
+* `has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"`
 `validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/`
 * [Documentation](https://github.com/thoughtbot/paperclip)
 
@@ -54,7 +54,7 @@ The following gems require configuration: rspec, capybara, devise
 
 `simplecov` simply measures the amount of test coverage for our entire app.
 * Add to top of rails_helper.rb:
-`require 'simplecov'`
+* `require 'simplecov'`
 `SimpleCov.start`
 * [Documentation](https://github.com/colszowka/simplecov)
 
