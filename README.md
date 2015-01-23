@@ -1,7 +1,8 @@
 # README
 
-*Title: Unknown
-*Framework: Rails 4.0
+* Project Title: Unknown
+* Framework: Rails 4.0
+* APIs Used: ?
 
 ## Getting Started
 * Run `bundle install`
@@ -23,23 +24,23 @@ The following gems require configuration: rspec, capybara, devise
 #### Devise
 * `rails generate devise:install`
 * in `config/environments/development.rb` add: 
-** `config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }`
+`config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }`
 * Add this to controllers where authentication is required: `before_action :authenticate_user!`
 * Further reading: [Github](https://github.com/plataformatec/devise) - [Documentation](http://devise.plataformatec.com.br/)
 
 #### Pundit
-* Add the following to application_controller.rb:
-** `include Pundit` at the top of the class
+* Add the following to application_controller.rb at top of class:
+* `include Pundit`
 * Create a policies folder in the app directory (app/policies)
 * [Documentation](https://github.com/elabs/pundit)
 
 #### Paperclip
 * Ensure Imagemagick is installed on your computer. Use your terminal install command (e.g. brew install imagemagick).
 * Add the following to `config/environments/development.rb`:
-** `Paperclip.options[:command_path] = "/usr/local/bin/"`
+`Paperclip.options[:command_path] = "/usr/local/bin/"`
 * Add the following to the appropriate model:
 `has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/`
+validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/`
 * [Documentation](https://github.com/thoughtbot/paperclip)
 
 #### Optional Gems
