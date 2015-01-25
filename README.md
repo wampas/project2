@@ -1,10 +1,13 @@
-# README
+# Project 2
 
-* Project Title: Unknown
+* Project Title: Travelogue
 * [Trello Board](https://trello.com/b/pl8zJkT4/wampas)
+* [C9 Online](https://ide.c9.io/protosac/project2)
 * Framework: Rails 4.0
-* APIs Used: ?
+* APIs Used: Google Maps (Places api)
 
+Check the Trello board for the most recent updates and planning for on-going work. This repo is used for [issue](https://github.com/wampas/project2/issues) and [milestone](https://github.com/wampas/project2/milestones) tracking.
+***
 ## Getting Started
 * Run `bundle install`
 * Run `rake db:schema:load` for <b>NEW</b> installs only.
