@@ -29,6 +29,8 @@ gem 'pundit'
 gem 'devise'
 # Image uploads
 gem 'paperclip', '~> 4.2'
+# Parse HTML and JSON
+gem 'httparty'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
