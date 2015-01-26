@@ -20,6 +20,9 @@ The following gems require configuration: rspec, capybara, devise
 * `require "rails_helper"` goes at the top of new _spec files.
 * Further reading: [Github](https://github.com/rspec/rspec-rails) - [Documentation](https://relishapp.com/rspec)
 
+#### Shoulda-Matchers
+* `require 'shoulda/matchers'` in rails_helper.rb
+
 #### Capybara
 * `require 'capybara/rails'` to rails_helper.rb
 * Create a features folder in the spec directory (spec/features)
