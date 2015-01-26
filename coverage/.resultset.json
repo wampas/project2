@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/proto/code/rails/project2/config/environment.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/proto/code/rails/project2/config/application.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/application.rb": [
         1,
         null,
         1,
@@ -36,12 +36,12 @@
         null,
         null
       ],
-      "/home/proto/code/rails/project2/config/boot.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/home/proto/code/rails/project2/config/environments/test.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/environments/test.rb": [
         1,
         null,
         null,
@@ -85,7 +85,7 @@
         null,
         null
       ],
-      "/home/proto/code/rails/project2/config/initializers/assets.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -98,7 +98,7 @@
         null,
         null
       ],
-      "/home/proto/code/rails/project2/config/initializers/backtrace_silencers.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -107,31 +107,12 @@
         null,
         null
       ],
-      "/home/proto/code/rails/project2/config/initializers/cookies_serializer.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/home/proto/code/rails/project2/config/initializers/devise.rb": [
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+      "/Users/Margaret/code/sf-wdi-14/project2/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -145,18 +126,11 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         1,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -183,6 +157,33 @@
         null,
         null,
         null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -210,6 +211,7 @@
         null,
         null,
         1,
+        null,
         null,
         null,
         null,
@@ -373,13 +375,13 @@
         null,
         null
       ],
-      "/home/proto/code/rails/project2/config/initializers/filter_parameter_logging.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/home/proto/code/rails/project2/config/initializers/inflections.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -397,18 +399,18 @@
         null,
         null
       ],
-      "/home/proto/code/rails/project2/config/initializers/mime_types.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/home/proto/code/rails/project2/config/initializers/session_store.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/home/proto/code/rails/project2/config/initializers/wrap_parameters.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -424,7 +426,17 @@
         null,
         null
       ],
-      "/home/proto/code/rails/project2/config/routes.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/spec/factories/users.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Margaret/code/sf-wdi-14/project2/config/routes.rb": [
         1,
         1,
         null,
@@ -433,7 +445,7 @@
         null,
         null,
         1,
-        null,
+        1,
         null,
         null,
         null,
@@ -484,35 +496,46 @@
         null,
         null
       ],
-      "/home/proto/code/rails/project2/app/helpers/application_helper.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/proto/code/rails/project2/app/helpers/home_helper.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/app/helpers/home_helper.rb": [
         1,
         null
       ],
-      "/home/proto/code/rails/project2/app/controllers/home_controller.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/app/helpers/users_helper.rb": [
         1,
-        null,
+        null
+      ],
+      "/Users/Margaret/code/sf-wdi-14/project2/app/controllers/users_controller.rb": [
         1,
         1,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        1,
-        2,
         0,
         null,
         null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
         null,
         null
       ],
-      "/home/proto/code/rails/project2/app/controllers/application_controller.rb": [
+      "/Users/Margaret/code/sf-wdi-14/project2/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -520,20 +543,14 @@
         1,
         null
       ],
-      "/home/proto/code/rails/project2/spec/routing/home_routing_spec.rb": [
-        1,
-        null,
+      "/Users/Margaret/code/sf-wdi-14/project2/app/models/user.rb": [
         1,
         1,
         1,
-        null,
-        null,
         1,
-        1,
-        null,
         null
       ]
     },
-    "timestamp": 1422255788
+    "timestamp": 1422305320
   }
 }
