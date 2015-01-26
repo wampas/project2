@@ -1,11 +1,13 @@
 <h1>Travelogue</h1>
 <p>Your destination for peer reviews</p>
 
-<% form_tag home_index_path, :method => 'get' do %>
+<%= form_tag home_index_path, :method => 'get' do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
 
-<div class="results"></div>
+<div class="results">
+	<%= @results %>
+</div>

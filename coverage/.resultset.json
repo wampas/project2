@@ -494,7 +494,21 @@
       ],
       "/home/proto/code/rails/project2/app/controllers/home_controller.rb": [
         1,
+        null,
         1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        0,
+        null,
+        null,
         null,
         null
       ],
@@ -505,8 +519,21 @@
         1,
         1,
         null
+      ],
+      "/home/proto/code/rails/project2/spec/routing/home_routing_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1422249004
+    "timestamp": 1422255788
   }
 }
