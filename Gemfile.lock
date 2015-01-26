@@ -268,7 +268,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy
-  paperclip
+  paperclip (~> 4.2)
   pundit
   rails (= 4.2.0)
   rspec-rails (~> 3.0)
