@@ -1,9 +1,13 @@
-# README
+# Project 2
 
-* Project Title: Unknown
+* Project Title: Travelogue
+* [Trello Board](https://trello.com/b/pl8zJkT4/wampas)
+* [C9 Online](https://ide.c9.io/protosac/project2)
 * Framework: Rails 4.0
-* APIs Used: ?
+* APIs Used: Google Maps (Places api)
 
+Check the Trello board for the most recent updates and planning for on-going work. This repo is used for [issue](https://github.com/wampas/project2/issues) and [milestone](https://github.com/wampas/project2/milestones) tracking.
+***
 ## Getting Started
 * Run `bundle install`
 * Run `rake db:schema:load` for <b>NEW</b> installs only.
@@ -12,9 +16,12 @@
 The following gems require configuration: rspec, capybara, devise
 
 #### RSpec
-* `rails generate rspec:install'
+* `rails generate rspec:install`
 * `require "rails_helper"` goes at the top of new _spec files.
 * Further reading: [Github](https://github.com/rspec/rspec-rails) - [Documentation](https://relishapp.com/rspec)
+
+#### Shoulda-Matchers
+* `require 'shoulda/matchers'` in rails_helper.rb
 
 #### Capybara
 * `require 'capybara/rails'` to rails_helper.rb
@@ -39,8 +46,8 @@ The following gems require configuration: rspec, capybara, devise
 * Add the following to `config/environments/development.rb`:
 `Paperclip.options[:command_path] = "/usr/local/bin/"`
 * Add the following to the appropriate model:
-`has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/`
+* `has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"`
+`validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/`
 * [Documentation](https://github.com/thoughtbot/paperclip)
 
 #### Optional Gems
@@ -53,8 +60,8 @@ validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/`
 
 `simplecov` simply measures the amount of test coverage for our entire app.
 * Add to top of rails_helper.rb:
-`require 'simplecov'
-SimpleCov.start`
+* `require 'simplecov'`
+`SimpleCov.start`
 * [Documentation](https://github.com/colszowka/simplecov)
 
 

@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 require 'simplecov' 
 SimpleCov.start
+=======
+require 'simplecov'
+SimpleCov.start
+
+>>>>>>> ce619855e950487f112f236496835ae386f55d88
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require 'spec_helper'
