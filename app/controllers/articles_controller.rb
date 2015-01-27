@@ -23,7 +23,22 @@ class ArticlesController < ApplicationController
 		end
 	end
 
-	
+	#Show specific article
+	def show
+		@article = Article.find(params[:id])
+	end
+
+	def edit
+	end
+
+	def update
+		if @article.update_attributes(article_params)
+			redirect_to @article
+		else
+			render :edit
+		end
+
+
 
 private
 	def article_params
@@ -31,3 +46,5 @@ private
 	end
 
 end
+end
+
