@@ -6,6 +6,7 @@ class GooglePlacesApi
     
   def self.query(location)
   	@places_query = HTTParty.get(@@url + location + @@api_key)
+  	HTTParty.get(@@url + location + @@api_key)
   end
 
 end
