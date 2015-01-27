@@ -16,4 +16,6 @@
 !/log/.keep
 /tmp
 /coverage
-coverage/
+coverage/converage/
+coverage/.resultset.json
+coverage/index.html
