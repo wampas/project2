@@ -18,11 +18,13 @@ ActiveRecord::Schema.define(version: 20150126185640) do
     t.string   "email"
     t.string   "password"
 
-ActiveRecord::Schema.define(version: 20150126225421) do
+ActiveRecord::Schema.define(version: 20150127041741) do
 
   create_table "articles", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "title"
+    t.text     "body"
   end
 
 end
