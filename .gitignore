@@ -15,6 +15,15 @@
 /log/*
 !/log/.keep
 /tmp
+<<<<<<< HEAD
 
 # Ignore application configuration
 /config/application.yml
+=======
+coverage
+
+
+coverage/.resultset.json
+coverage/index.html
+
+>>>>>>> master
