@@ -426,6 +426,14 @@
         null,
         null
       ],
+      "/home/proto/code/rails/project2/spec/factories/articles.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/home/proto/code/rails/project2/spec/factories/users.rb": [
         1,
         1,
@@ -436,16 +444,6 @@
         null
       ],
       "/home/proto/code/rails/project2/config/routes.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
         null,
         null,
         null,
@@ -494,32 +492,33 @@
         null,
         null,
         null,
-        null
-      ],
-      "/home/proto/code/rails/project2/app/models/user.rb": [
-        1,
         null,
         null,
-        1,
         null,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/home/proto/code/rails/project2/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/proto/code/rails/project2/app/helpers/home_helper.rb": [
-        1,
-        null
-      ],
-      "/home/proto/code/rails/project2/app/helpers/users_helper.rb": [
-        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1422318483
+    "timestamp": 1422318692
   }
 }
