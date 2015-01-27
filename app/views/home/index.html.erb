@@ -15,7 +15,7 @@
     <ul>
       <% @results['results'].each do |r| %>
         <p class="destination">
-          <em><%= r['name'] %></em>
+          <%= r['name'] %>
         </p>
         <li class="data"><%= r['formatted_address'] %>
       <% end %>    
