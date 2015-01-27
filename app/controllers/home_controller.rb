@@ -4,13 +4,10 @@ require 'uri'
 class HomeController < ApplicationController
 	include HTTParty
   helper :home
-
 	#format :html
 
-	def initialize
-    @google = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='
-    @api_key = '&key=' + API_KEY
-  end
+  @google = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='
+  @api_key = '&key=' + API_KEY
 
   def index
     # @results = Home.location_name(params[:search])
