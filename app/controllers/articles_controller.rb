@@ -45,6 +45,9 @@ def article_params
 	params.require(:article).permit(:title, :body) #only these parameters are allowed to be submitted by user.
 end
 
+def find_article
+	@article = Article.find(params[:id])
+end
 
 end
 
