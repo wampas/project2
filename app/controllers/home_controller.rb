@@ -6,7 +6,7 @@ class HomeController < ApplicationController
   helper :home
 
   @google = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='
-  
+
   def index
     if params[:search] != nil
       @user_query = URI.encode(params[:search])
