@@ -12,6 +12,10 @@
 <div class="results">
 	<% if @results %>
   <h3>Search Results</h3>
-  <%= @results %>
+  <ul>
+    <%= @results['results'].each do |r| %>
+      <li><%= link_to r['formatted_address'] %></li>
+    <% end %>    
+  </ul>
   <% end %>
 </div>

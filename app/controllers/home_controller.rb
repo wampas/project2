@@ -6,13 +6,17 @@ class HomeController < ApplicationController
 
 	def initialize
     @google = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='
-    @api_key = '&key=AIzaSyAdaTo8MaW1BMyS8FBzdev6FknYTyMYjPA'
+    @api_key = '&key=' + API_KEY
   end
 
   def index
   	if params[:search] != nil
   		@results = HTTParty.get(@google + params[:search] + @api_key)
   	end
+    # byebug
   end
 
+  def show
+    
+  end
 end

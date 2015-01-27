@@ -31,7 +31,9 @@ gem 'devise'
 gem 'paperclip', '~> 4.2'
 # Parse HTML and JSON
 gem 'httparty'
-
+# Google Places
+gem 'google_places'
+gem 'figaro'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -8,4 +8,8 @@ RSpec.describe HomeController, type: :routing do
 	it 'routes the root path to the index action' do
 		expect(get('/')).to route_to('home#index')
 	end
+
+  it 'routes to #show' do
+    expect(get('/home/show')).to route_to('home#show')
+  end
 end
