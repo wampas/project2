@@ -9,5 +9,11 @@
 <% end %>
 
 <div class="results">
-	<%= @results %>
+	<% if @results %>
+  <ul>
+    <%= @results['results'].each do |r| %>
+      <li><%= link_to r['formatted_address'] %></li>
+    <% end %>    
+  </ul>
+  <% end %>
 </div>
