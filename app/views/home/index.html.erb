@@ -13,7 +13,7 @@
 	<% if @results %>
   <h3 id="resultTitle">Search Results</h3>
   <ul>
-    <% @results['results'].each do |r| %>
+    <%= @results['results'].each do |r| %>
       <p class="destination">
         <%= r['name'] %>
       </p>
