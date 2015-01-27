@@ -14,7 +14,9 @@
   <h3 id="resultTitle">Search Results</h3>
   <ul>
     <%= @results['results'].each do |r| %>
-      <p class="destination"><em><%= link_to r['name'], home_show_path %></em></p>
+      <p class="destination">
+        <em><%= r['name'] %></em>
+      </p>
       <li class="data"><%= r['formatted_address'] %>
     <% end %>    
   </ul>
