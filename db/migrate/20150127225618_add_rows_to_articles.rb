@@ -1,0 +1,6 @@
+class AddRowsToArticles < ActiveRecord::Migration
+  def change
+    add_column :articles, :location, :string
+    add_column :articles, :image, :string
+  end
+end
