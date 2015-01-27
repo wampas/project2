@@ -11,11 +11,13 @@
 
 <div class="results">
 	<% if @results %>
-  <h3>Search Results</h3>
+  <h3 id="resultTitle">Search Results</h3>
   <ul>
     <%= @results['results'].each do |r| %>
-      <em><%= link_to r['name'], home_show_path %></em>
-      <li><%= r['formatted_address'] %>
+      <p class="destination">
+        <em><%= r['name'] %></em>
+      </p>
+      <li class="data"><%= r['formatted_address'] %>
     <% end %>    
   </ul>
   <% end %>
