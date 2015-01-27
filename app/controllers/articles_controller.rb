@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
 		@article = Article.all
 	end
 
-#Give user ability to create new articles
+ #Give user ability to create new articles
 	def new
 		@article = Article.new
 	end
@@ -37,14 +37,14 @@ class ArticlesController < ApplicationController
 		else
 			render :edit
 		end
-
-
-
-private
-	def article_params
-		params.require(:article).permit(:title, :body) #only these parameters are allowed to be submitted by user.
 	end
 
+private
+
+def article_params
+	params.require(:article).permit(:title, :body) #only these parameters are allowed to be submitted by user.
 end
+
+
 end
 
