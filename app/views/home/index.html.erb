@@ -35,7 +35,7 @@
 </div>
 
 
-
+<% if @results %>
   <div class="container">
     <div class="panel-group" id="accordion">
       <div class="panel panel-default">
@@ -59,32 +59,10 @@
                 </li>
               <% end %>    
           </ul>
-            a jadls;kf ads;lk fja;sdlkf jal;dskfj adlsfkj n
-        </div>
-    </div>
-  </div>
-
-<!-- Incorporate the collapse functionality above with the search syntax below -->
-
-<% if @results %>
-  <div class="container">
-    <div class="panel-group" id="accordion">
-      <div class="panel panel-default">
-        <div class="pane-heading"> 
-          <h3 id="resultTitle">Search Results</h3>
-            <ul>
-              <%= @results['results'].each do |r| %>
-                <p class="destination">
-                 <%= r['name'] %>
-               </p>
-                <li class="data">
-                  <span><%= r['formatted_address'] %></span>
-                  <span><%= link_to "Add Article", new_article_path %></span>
-                </li>
-              <% end %>    
-          </ul>
         </div>
       </div>
     </div>
   </div>
 <% end %>
+<!-- Incorporate the collapse functionality above with the search syntax below -->
+
