@@ -11,8 +11,6 @@ class ArticlesController < ApplicationController
 		else
 			@articles = Article.all
 		end
-
-		# @article = Article.find(find_article)
 	end
 
  #Give user ability to create new articles
