@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
 			@articles = Article.all
 		end
 
-		@article = Article.where(params[:id])
+		# @article = Article.find(find_article)
 	end
 
  #Give user ability to create new articles
