@@ -49,7 +49,7 @@ class ArticlesController < ApplicationController
 private
 
 def article_params
-	params.require(:article).permit(:title, :body) #only these parameters are allowed to be submitted by user.
+	params.require(:article).permit(:title, :body, :location, :image) #only these parameters are allowed to be submitted by user.
 end
 
 def find_article
