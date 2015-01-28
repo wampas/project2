@@ -10,8 +10,8 @@ class HomeController < ApplicationController
   def index
     if params[:search] != nil
       @user_query = URI.encode(params[:search])
-      @results = GooglePlacesApi.query(@user_query)
-    end
+      @results    = GooglePlacesApi.query(@user_query)
+  	end
     # byebug
   end
 
