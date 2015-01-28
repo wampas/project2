@@ -12,6 +12,7 @@ class HomeController < ApplicationController
       @user_query = URI.encode(params[:search])
       @results    = GooglePlacesApi.query(@user_query)
   	end
+    @articles = Article.all
     # byebug
   end
 

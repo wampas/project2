@@ -1,32 +1,45 @@
 <div class="jumbotron">
+<!-- TITLE: Image in custom.css -->
+  <h1>Travelogue</h1>
+  <p>Your destination for peer reviews</p>
 
-<h1>Travelogue</h1>
-<p>Your destination for peer reviews</p>
+  <button type="button" class="btn btn-default" id="how-it-works">How It Works</button>
+  <!-- SEARCH BOX -->
+  <div>
+    <%= form_tag home_index_path, :method => 'get', class: 'form-group' do %>
+      <p>
+        <%= label_tag :search %>
+        <%= text_field_tag :search, params[:search], class: 'form-control' %>
+        <%= submit_tag "Search", :name => nil %>
+      </p>
+    <% end %>
+  </div>
 
-<button type="button" class="btn btn-default">How It Works</button>
-<%= form_tag home_index_path, :method => 'get', class: 'form-group' do %>
-  <p>
-    <%= label_tag :search %>
-    <%= text_field_tag :search, params[:search], class: 'form-control' %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
 </div>
 
+<div class="sm-col-9">
+  <div class="results">
+  	<% if @results %>
+    <h3 id="resultTitle">Search Results</h3>
+    <ul>
+      <%= @results['results'].each do |r| %>
+        <p class="destination">
+          <%= r['name'] %>
+        </p>
+        <li class="data">
+          <span><%= r['formatted_address'] %></span>
+          <span><%= link_to "Add Article", new_article_path %></span>
+        </li>
+      <% end %>    
+    </ul>
+    <% end %>
+  </div>
+</div>
 
-<div class="results">
-	<% if @results %>
-  <h3 id="resultTitle">Search Results</h3>
+<div class="col-sm-3">
   <ul>
-    <%= @results['results'].each do |r| %>
-      <p class="destination">
-        <%= r['name'] %>
-      </p>
-      <li class="data">
-        <span><%= r['formatted_address'] %></span>
-        <span><%= link_to "Add Article", new_article_path %></span>
-      </li>
-    <% end %>    
+    <% @articles.each do |a| %>
+    <li><%= link_to a.location %></li>
+    <% end %>
   </ul>
-  <% end %>
 </div>

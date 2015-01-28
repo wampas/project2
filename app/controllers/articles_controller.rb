@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 	
 	#List all articles
 	def index
-		@article = Article.all
+		@articles = Article.all
 	end
 
  #Give user ability to create new articles

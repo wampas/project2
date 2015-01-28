@@ -2,3 +2,22 @@ body {
   min-height: 2000px;
   padding-top: 70px;
 }
+
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(http://www.travelandleisure.com/assets/images/2012-hpp-bali-high.jpg/variations/original.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    padding: 150px;
+}
+
+
+a {
+  color: black;
+}
+
+#how-it-works button{
+
+}
