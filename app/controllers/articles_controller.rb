@@ -1,13 +1,18 @@
+require 'uri'
+
 class ArticlesController < ApplicationController
 	before_action :find_article, only: [:show, :edit, :update, :destroy]
 	
 	#List all articles
-	def index
+	def index		
 		if params[:location].present?
-			@articles = Article.where(location: params[:location])
+			@decoded = URI.decode(params[:location])
+			@articles = Article.where(location: @decoded)
 		else
 			@articles = Article.all
 		end
+
+		@article = Article.where(params[:id])
 	end
 
  #Give user ability to create new articles
