@@ -30,15 +30,18 @@
 
 <div class="results">
 	<% if @results %>
-    <h3 id="resultTitle">Search Results</h3>
-    <ul>
-      <% @results['results'].each do |r| %>
-        <p class="destination">
-          <%= r['name'] %>
-        </p>
-        <li class="data"><%= r['formatted_address'] %>
-      <% end %>    
-    </ul>
+  <h3 id="resultTitle">Search Results</h3>
+  <ul>
+    <%= @results['results'].each do |r| %>
+      <p class="destination">
+        <%= r['name'] %>
+      </p>
+      <li class="data">
+        <span><%= r['formatted_address'] %></span>
+        <span><%= link_to "Add Article", new_article_path %></span>
+      </li>
+    <% end %>    
+  </ul>
   <% end %>
 </div>
 
