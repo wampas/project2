@@ -3,7 +3,11 @@ class ArticlesController < ApplicationController
 	
 	#List all articles
 	def index
-		@articles = Article.all
+		if params[:location].present?
+			@articles = Article.where(location: params[:location])
+		else
+			@articles = Article.all
+		end
 	end
 
  #Give user ability to create new articles

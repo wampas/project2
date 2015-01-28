@@ -38,8 +38,8 @@
 
 <div class="col-sm-3">
   <ul>
-    <% @articles.each do |a| %>
-    <li><%= link_to a.location %></li>
+    <% @locations.each do |location| %>
+    <li><%= link_to location, articles_path(location: location) %></li>
     <% end %>
   </ul>
 </div>

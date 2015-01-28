@@ -12,7 +12,7 @@ class HomeController < ApplicationController
       @user_query = URI.encode(params[:search])
       @results    = GooglePlacesApi.query(@user_query)
   	end
-    @articles = Article.all
+    @locations = Article.pluck(:location).uniq
     # byebug
   end
 
