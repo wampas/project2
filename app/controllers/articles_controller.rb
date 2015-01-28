@@ -1,9 +1,16 @@
+require 'uri'
+
 class ArticlesController < ApplicationController
 	before_action :find_article, only: [:show, :edit, :update, :destroy]
 	
 	#List all articles
-	def index
-		@article = Article.all
+	def index		
+		if params[:location].present?
+			@decoded = URI.decode(params[:location])
+			@articles = Article.where(location: @decoded)
+		else
+			@articles = Article.all
+		end
 	end
 
  #Give user ability to create new articles
@@ -44,7 +51,7 @@ class ArticlesController < ApplicationController
 private
 
 def article_params
-	params.require(:article).permit(:title, :body) #only these parameters are allowed to be submitted by user.
+	params.require(:article).permit(:title, :body, :location, :image) #only these parameters are allowed to be submitted by user.
 end
 
 def find_article
