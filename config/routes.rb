@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'home/show' => 'home#show'
   
   # Devise config
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "users/registrations"}
 
   # Resources
   resources :articles do
