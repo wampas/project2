@@ -1,11 +1,12 @@
 
 <h3>User: <%= @user.email %></h3>
-<h4>Email: <%= @user.email %> </h4>
+<!-- <h4>Email: <%= @user.email %> </h4> -->
 
 
 <%= image_tag @user.avatar.url(:medium) %>
 
 <br>
+
 <%= link_to "Back", :back %>
 <% if user_signed_in? %>
 		<ul> 
