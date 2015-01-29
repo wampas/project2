@@ -7,7 +7,7 @@ window.onload = function () {
   var placeName    = link.innerhtml;
   var placeAddress = place.innerhtml;
   
-  link.onclick = function() {
+  title.onclick = function() {
     // Display h3 header with destination name
     title.innerhtml = link;
     // Load destination data in the .results div

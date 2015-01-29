@@ -1,8 +1,5 @@
-<h1>Destination Name</h1>
-<p>
-  <% if @results %>
-    <%= @results %>
-  <% end %>
-</p>
+<h1><%= @details['result']['name'] %></h1>
+
+<%= @details['result']['formatted_address'] %>
 
 <div class="map"></div>
