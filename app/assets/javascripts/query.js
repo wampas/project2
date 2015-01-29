@@ -1,7 +1,20 @@
 window.onload = function () {
-  $.ajax({
-    url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?',
-    api: API_KEY
+
+  function requestJSON(url, callback) {
+
+    $.ajax({
+      url: 'https://maps.googleapis.com/maps/api/place/textsearch/json?',
+      api: API_KEY,
+      data: { get_param: 'search' },
+      dataType: json,
+      done: function(data) {
+        $.each(data, function(index, element) {
+          $('#listResults').append($('p', {
+            text: element.name
+          }));
+        });
+      }
+      
   });
 
   // Get search results; must use onclick to call on search button
