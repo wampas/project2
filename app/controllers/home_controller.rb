@@ -20,5 +20,7 @@ class HomeController < ApplicationController
     if params[:search] != nil
       @results = GooglePlacesApi.query(params[:search])
     end
+      @details = GooglePlacesApi.details(params[:id])
+      #photos = GooglePlacesApi.photos(params[:id])
   end
 end
