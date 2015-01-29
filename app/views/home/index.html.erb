@@ -17,21 +17,21 @@
 
 </div>
 
-<div class="sm-col-6">
+<div class="col-sm-9">
   <div class="results">
   	<% if @results %>
     <h3 id="resultTitle">Search Results</h3>
-    <ul>
+    <!-- LIST ALL SEARCH RESULTS -->
       <%= @results['results'].each do |r| %>
-        <p class="destination">
-          <%= r['name'] %>
-        </p>
-        <li class="data">
-          <span><%= r['formatted_address'] %></span>
-          <span><%= link_to "Add Article", new_article_path %></span>
-        </li>
+        <div>
+          <h4><%= link_to r['name'], r['place_id'].to_s %></h4>
+          <p class="data">
+            <span><%= r['formatted_address'] %></span>
+            <span><%= link_to "Add Article", new_article_path, class: "btn btn-info" %></span>
+          </p>
+        </div>
       <% end %>    
-    </ul>
+  
     <% end %>
   </div>
 </div>
