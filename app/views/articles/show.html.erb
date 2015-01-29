@@ -10,7 +10,10 @@
 
 <%= link_to "Back", articles_path %>
 
-<% if policy(@article).update? %>  <!-- shows only if current user authorized -->
-  <%= link_to "Edit article", edit_article_path(@article) %>
-  <%= link_to "Delete article", edit_article_path(@article) %>
+<% if policy(@article).edit? %>
+	<%= link_to "Edit ", edit_article_path(@article) %>
+<% end %>
+
+<% if policy(@article).destroy? %>
+	<%= link_to "Delete ", @article, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
