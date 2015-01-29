@@ -47,13 +47,14 @@
 <% end %>
 </div>
 
+<!-- LEFT SIDE -->
 <div class="col-sm-9">
   <div class="results">
   	<% if @results %>
     <h3 id="resultTitle">Search Results</h3>
     <!-- LIST ALL SEARCH RESULTS -->
       <%= @results['results'].each do |r| %>
-        <div>
+        <div id="listResults">
           <h4><%= link_to r['name'], r['place_id'].to_s %></h4>
           <p class="data">
             <span><%= r['formatted_address'] %></span>
@@ -65,6 +66,8 @@
     <% end %>
   </div>
 </div>
+
+<!-- RIGHT SIDEBAR -->
 
 <% if @results %>
   <div class="col-sm-9">
@@ -98,6 +101,7 @@
 <!-- Incorporate the collapse functionality above with the search syntax below -->
 
 <div class="col-sm-3">
+  <!-- LIST OF CURRENT LOCATIONS WITH ARTICLES -->
   <ul>
     <% @locations.each do |location| %>
     <li><%= link_to location, articles_path(location: location) %></li>
