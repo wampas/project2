@@ -19,7 +19,9 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		@article = Article.new(article_params) 
+		# render plain: params[:article].inspect
+		@article = Article.new(article_params)
+		@article.user = current_user
 		
 		if @article.save 
 			redirect_to @article 
@@ -39,13 +41,14 @@ class ArticlesController < ApplicationController
 	def update
 		# @article = Article.find(find_article)
 		authorize @article
-		@article.update(article_params)
-		respond_with(@article)
-		# if @article.update_attributes(article_params)
+		if @article.update(article_params)
+			redirect_to @article
+		# respond_with(@article)
+		# # if @article.update_attributes(article_params)
 		# 	redirect_to @article
-		# else
-		# 	render :edit
-		# end
+		else
+			render :edit
+		end
 	end
 
 private
