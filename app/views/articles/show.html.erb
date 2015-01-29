@@ -10,7 +10,7 @@
 
 <%= link_to "Back", articles_path %>
 
-<% if policy(@article).update? %>
+<% if policy(@article).update? %>  <!-- shows only if current user authorized -->
   <%= link_to "Edit article", edit_article_path(@article) %>
   <%= link_to "Delete article", edit_article_path(@article) %>
 <% end %>

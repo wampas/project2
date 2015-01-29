@@ -9,11 +9,13 @@
     <%= form_tag home_index_path, :method => 'get', class: 'form-group' do %>
       <p>
         <%= label_tag :search %>
-        <%= text_field_tag :search, params[:search], class: 'form-control' %>
+        <%= text_field_tag :search, params[:search], class: 'form-control', :placeholder => "e.g. Tokyo museums, Seattle cafes, Dublin pubs, etc." %>
+      <!-- SEARCH button -->
         <%= submit_tag "Search", :name => nil %>
       </p>
     <% end %>
   </div>
+ <!-- SEARCH BOX end-->
 
 </div>
 
