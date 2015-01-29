@@ -3,42 +3,54 @@
   <h1>Travelogue</h1>
   <p>Your destination for peer reviews</p>
 
-  <button type="button" class="btn btn-default" id="how-it-works">How It Works</button>
-  <!-- SEARCH BOX -->
-  <div>
-    <%= form_tag home_index_path, :method => 'get', class: 'form-group' do %>
-      <p>
-        <%= label_tag :search %>
-        <%= text_field_tag :search, params[:search], class: 'form-control', :placeholder => "e.g. Tokyo museums, Seattle cafes, Dublin pubs, etc." %>
-      <!-- SEARCH button -->
-        <%= submit_tag "Search", :name => nil %>
-      </p>
-    <% end %>
-  </div>
- <!-- SEARCH BOX end-->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  How it works
+</button>
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">How it works</h4>
+      </div>
+      <!-- Add padding to this text -->
+      <p>Travelogue is a social networking and blogging web application where users can share their travel experiences, advice, and photos. Users/travelers can search by destination and read what other users are posting about that location using the Google Places API.</p>  
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="sm-col-6">
+<!-- SEARCH BOX -->
+<%= form_tag home_index_path, :method => 'get', class: 'form-group' do %>
+  <p>
+    <%= label_tag :search %>
+    <%= text_field_tag :search, params[:search], class: 'form-control' %>
+    <%= submit_tag "Search", class: "btn btn-warning btn-lg", :placeholder => "e.g. Tokyo museums, Seattle cafes, Dublin pubs, etc.", onclick: "getResults()" %>
+  </p>
+<% end %>
+</div>
+
+<!-- LEFT SIDE -->
+<div class="col-sm-9">
   <div class="results">
-  	<% if @results %>
+  	
     <h3 id="resultTitle">Search Results</h3>
-    <ul>
-      <%= @results['results'].each do |r| %>
-        <p class="destination">
-          <%= r['name'] %>
-        </p>
-        <li class="data">
-          <span><%= r['formatted_address'] %></span>
-          <span><%= link_to "Add Article", new_article_path %></span>
-        </li>
-      <% end %>    
-    </ul>
-    <% end %>
+    <!-- LIST ALL SEARCH RESULTS -->
+      
+        <div id="listResults">
+          
+        </div>
+      
   </div>
 </div>
+
+<!-- RIGHT SIDEBAR -->
 
 <div class="col-sm-3">
+  <!-- LIST OF CURRENT LOCATIONS WITH ARTICLES -->
   <ul>
     <% @locations.each do |location| %>
     <li><%= link_to location, articles_path(location: location) %></li>
