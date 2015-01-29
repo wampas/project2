@@ -2,6 +2,7 @@ require 'uri'
 
 class ArticlesController < ApplicationController
 	before_action :find_article, only: [:show, :edit, :update, :destroy]
+	before_action :authenticate_user!
 	
 	#List all articles
 	def index		
@@ -40,12 +41,15 @@ class ArticlesController < ApplicationController
 	end
 
 	def update
+		# @article = Article.find(find_article)
 		authorize @article
-		if @article.update_attributes(article_params)
-			redirect_to @article
-		else
-			render :edit
-		end
+		@article.update(article_params)
+		respond_with(@article)
+		# if @article.update_attributes(article_params)
+		# 	redirect_to @article
+		# else
+		# 	render :edit
+		# end
 	end
 
 private
