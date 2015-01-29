@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require custom
+ *= require form
  *= require bootstrap.min
  *= require_self
  */
