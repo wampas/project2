@@ -59,9 +59,17 @@
 </nav>
 <div class="container">
 
+<% flash.each do |type, message| %>
+  <div class="alert <%= bootstrap_class_for(type) %> fade in">
+    <button class="close" data-dismiss="alert">×</button>
+    <%= message %>
+  </div>
+<% end %>
+
+<!-- 
 <p class="notice"><%= notice %><p>
 <p class="alert"><%= alert %><p>
-
+ -->
 <%= yield %>
 	
 </div>
