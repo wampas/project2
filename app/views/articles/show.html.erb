@@ -11,6 +11,8 @@
 <p>
 <%= link_to "Previous Page", articles_path, class: "btn btn-default" %>
 </p>
+
+<div class="comments col-sm-8">
 <table class="table">
 	<tr>
 		<caption>
@@ -22,7 +24,7 @@
 	</tr>
 	<%= render @article.comments %>	
 </table>
-
+</div>
 <div class="col-sm-6">
 	<p>
 		<%= render 'comment_form' %>
