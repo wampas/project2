@@ -135,7 +135,7 @@
 	transition: opacity 0.3s;
 }
 
-.input__label--yoko {
+.input__label--yoko  {
 	position: relative;
 	width: 100%;
 	color: #E36D2D;
@@ -156,6 +156,10 @@
 	transform-origin: 50% 100%;
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
+}
+
+#ryan:before{
+	height: 8em
 }
 
 .input__label--yoko::after {

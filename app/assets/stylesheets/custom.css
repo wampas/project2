@@ -22,11 +22,28 @@ a {
 
 }
 
-/*form*/
-
-
 
 #loggedin {
   padding-top: 16px;
   padding-right: 10px;
 }
+
+/*profile*/
+
+.profile {
+  text-align: center;
+}
+
+/*new article*/
+
+.newtrip {
+  font-size: 70px;
+}
+
+.imagelabel {
+  color: #E36D2D;
+  font-size: 20px;
+  margin-left: 25px;
+}
+
+

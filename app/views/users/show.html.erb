@@ -1,21 +1,34 @@
+<br/><br/>
 
-<h3>User: <%= @user.email %></h3>
-<!-- <h4>Email: <%= @user.email %> </h4> -->
-
+<div class="profile">
 
 <%= image_tag @user.avatar.url(:medium) %>
+<!-- <h4>Email: <%= @user.email %> </h4> -->
+
+<h1>Hello, <%= @user.email %>!</h1>
+
+
 
 <br>
 
-<%= link_to "Back", :back %>
+<h3>Check out your Articles</h3><li><%= @article %></li>
+
+
+
+<br/><br/>
+
+<%= link_to "Back", :back, class: "btn btn-primary" %>
 <% if user_signed_in? %>
-		<ul> 
-        <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
-        <li><%= link_to 'Logout', destroy_user_session_path, method: 'DELETE' %></li>
-        </ul> 
+		
+        <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-primary" %>
+        <%= link_to 'Logout', destroy_user_session_path, method: 'DELETE', class: "btn btn-primary" %>
+         
  <% end %>
 
+ </div>
+
 <h3>My Articles:</h3>
+
 
 <% @user.articles.each do |r| %>
 <li><%= link_to r.title, r %></li>
