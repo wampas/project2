@@ -135,7 +135,7 @@
 	transition: opacity 0.3s;
 }
 
-.input__label--yoko {
+.input__label--yoko  {
 	position: relative;
 	width: 100%;
 	color: #E36D2D;
@@ -156,6 +156,10 @@
 	transform-origin: 50% 100%;
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
+}
+
+#ryan::before{
+	height: 23em;
 }
 
 .input__label--yoko::after {
@@ -184,6 +188,7 @@
 	transition-delay: 0.3s;
 }
 
+
 .input__field--yoko:focus + .input__label--yoko::before,
 .input--filled .input__label--yoko::before {
 	-webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
@@ -201,14 +206,5 @@
 	transform: perspective(1000px) rotate3d(1, 0, 0, -90deg);
 }
 
-.input__field--yoko2 {
-	float: right;
-	z-index: 10;
-	width: 100%;
-	background: transparent;
-	color: #1D2422;
-	height: 800px;
-	opacity: 0;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-}
+
+

@@ -1,19 +1,45 @@
 <h1><%= @article.title %></h1>
 
-
+<!-- Location Info -->
 <p><%= @article.location %></p>
-<%= image_tag @article.image.url %>
+<%= image_tag @article.image.url(:medium) %>
+<!-- Article -->
+<div class="article">
+	<p><%= @article.body %></p>
+</div>
 
+<div class="edit-article">
+	<p>
+	<% if policy(@article).edit? %>
+		<%= link_to "Edit ", edit_article_path(@article), class: "btn btn-info" %>
+	<% end %>
+	
+	<% if policy(@article).destroy? %>
+		<%= link_to "Delete ", @article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+	<% end %>
+	</p>
+</div>
+
+<!-- Navigation -->
 <p>
-  <%= @article.body %>
+<%= link_to "Previous Page", articles_path, class: "btn btn-default" %>
 </p>
-
-<%= link_to "Back", articles_path %>
-
-<% if policy(@article).edit? %>
-	<%= link_to "Edit ", edit_article_path(@article) %>
-<% end %>
-
-<% if policy(@article).destroy? %>
-	<%= link_to "Delete ", @article, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+<!-- Comments table -->
+<div class="comments col-sm-8">
+<table class="table">
+	<tr>
+		<caption>
+			<% flash.each do |key, value| %>
+    		<div class="alert alert-<%= key %> margin animated fadeOut"><%= value %></div>
+ 			<% end %>
+		</caption>
+		<th>Comments</th>
+	</tr>
+	<%= render @article.comments %>	
+</table>
+</div>
+<div class="col-sm-6">
+	<p>
+		<%= render 'comment_form' %>
+	</p>	
+</div>

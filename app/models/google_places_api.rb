@@ -15,7 +15,7 @@ class GooglePlacesApi
   end
 
   def self.photos(reference)
-  	HTTParty.get('https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + reference + @@api_key)
+  	HTTParty.get("https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + reference + @@api_key)
   end
 
 end
