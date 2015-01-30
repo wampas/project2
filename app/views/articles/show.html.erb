@@ -7,9 +7,12 @@
 <p>
   <%= @article.body %>
 </p>
-
+<div>
+<%= render @article.comments %>
+</div>
+<p>
 <%= render 'comment_form' %>
-
+</p>
 
 <%= link_to "Back", articles_path %>
 
