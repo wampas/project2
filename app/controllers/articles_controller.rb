@@ -27,14 +27,14 @@ class ArticlesController < ApplicationController
 			flash[:error] = @article.errors.full_messages.to_sentence
 			render :new # otherwise, render the form again, so user can correct mistakes
 		end
-		@article = Article.new(article_params)
-		@article.user = current_user
+		# @article = Article.new(article_params)
+		# @article.user = current_user
 		
-		if @article.save 
-			redirect_to @article 
-		else
-			render :new 
-		end
+		# if @article.save 
+		# 	redirect_to @article 
+		# else
+		# 	render :new p
+		# end
 	end
 
 	def show
