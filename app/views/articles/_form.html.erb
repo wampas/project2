@@ -12,7 +12,7 @@
 <div class="bodytext">
 <span class="input input--minoru">
 	<%= a.text_area :body, class: "input__field input__field--yoko", id: "input-17" %>
-		<label class="input__label input__label--yoko" for="input-17">
+		<label class="input__label input__label--yoko" for="input-17" id="ryan">
 			<span class="input__label-content input__label-content--yoko"><%= a.label :body %></span>
 		</label>
 </span>
@@ -30,15 +30,20 @@
 
 
 <div class="form-group">
-  <%= a.label :image %>
+  
   <%= a.file_field :image %>
+  
+  <span class="imagelabel"><%= a.label :image %></span>
+	
 </div>
 
 <br/>
 
-<%= a.submit 'Submit' %>
+<%= a.submit 'Submit', class: "btn btn-primary" %>
 
 <% end %>
+
+<br/>
 
 
 
