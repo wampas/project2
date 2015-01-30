@@ -28,27 +28,28 @@
   <p>
     <%= label_tag :search %>
     <%= text_field_tag :search, params[:search], class: 'form-control' %>
-    <%= submit_tag "Search", class: "btn btn-warning btn-lg" %>
+    <%= submit_tag "Search", class: "btn btn-warning btn-lg", :placeholder => "e.g. Tokyo museums, Seattle cafes, Dublin pubs, etc." %>
   </p>
 <% end %>
 </div>
 
 <!-- LEFT SIDE -->
 <div class="col-sm-9">
-  <% if @results %>
+  <div class="results">
+  	<% if @results %>
     <h3>Search Results</h3>
     <!-- LIST ALL SEARCH RESULTS -->
-      <%= @results['results'].each do |r| %>
-        <!-- <div>
+      <% @results['results'].each do |r| %>
+        <div>
           <h4><%= link_to r['name'], r['place_id'].to_s %></h4>
-          <p>
+          <p class="data">
             <span><%= r['formatted_address'] %></span>
             <span><%= link_to "Add Article", new_article_path, class: "btn btn-info" %></span>
           </p>
-        </div> -->
+        </div>
       <% end %>
-  <% end %>
-
+    <% end %>
+  </div>
 </div>
 
 <!-- RIGHT SIDEBAR -->
