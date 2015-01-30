@@ -21,8 +21,8 @@ Article.destroy_all
 
 						Phasellus semper urna in massa posuere fringilla. Donec ut massa odio. Integer accumsan ex eget justo feugiat consequat. Nam auctor nibh ac elit iaculis auctor. Aenean ac nunc vitae ante dignissim ornare. Nullam nec sagittis metus, eget rhoncus risus. Nam et tellus a felis efficitur laoreet. Donec non venenatis sapien, sed ultricies ligula. Aliquam a velit dignissim, gravida odio vitae, auctor dui.
 
-						Donec posuere sagittis arcu, eu euismod lacus congue ut. In faucibus aliquet ante, sed pretium leo auctor non. Aliquam efficitur, dolor ut scelerisque pellentesque, nunc tellus gravida libero, porttitor suscipit lorem ipsum nec sapien. Pellentesque sit amet libero in lectus tempus elementum a et mi. Cras id erat et est pulvinar interdum eu et ligula. Ut vitae venenatis lorem. Fusce tempor sem a mi vulputate aliquet. Pellentesque eu justo et lorem vehicula fermentum vitae lobortis erat. Aliquam erat volutpat. Quisque sit amet est ut justo dignissim accumsan eget quis justo. Mauris commodo eget ex non ullamcorper. Praesent lacinia nisi vitae sapien ultricies, at pellentesque turpis ullamcorper. Proin at iaculis dui. Suspendisse potenti."
+						Donec posuere sagittis arcu, eu euismod lacus congue ut. In faucibus aliquet ante, sed pretium leo auctor non. Aliquam efficitur, dolor ut scelerisque pellentesque, nunc tellus gravida libero, porttitor suscipit lorem ipsum nec sapien. Pellentesque sit amet libero in lectus tempus elementum a et mi. Cras id erat et est pulvinar interdum eu et ligula. Ut vitae venenatis lorem. Fusce tempor sem a mi vulputate aliquet. Pellentesque eu justo et lorem vehicula fermentum vitae lobortis erat. Aliquam erat volutpat. Quisque sit amet est ut justo dignissim accumsan eget quis justo. Mauris commodo eget ex non ullamcorper. Praesent lacinia nisi vitae sapien ultricies, at pellentesque turpis ullamcorper. Proin at iaculis dui. Suspendisse potenti.",
 		location: "City, ST",
-		image: "image#{i}"
+		image: ""
 	)
 end
