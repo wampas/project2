@@ -44,6 +44,20 @@ a {
   color: #E36D2D;
   font-size: 20px;
   margin-left: 25px;
+  border-top: 2px;
+}
+
+.line-separator{
+  height:1px;
+  background: #ACD8CB;
+  border-bottom: 2px solid #ACD8CB;
+  width: 400px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.choose-image {
+  margin-left: 15px;
 }
 
 
