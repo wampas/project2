@@ -2,22 +2,25 @@ class ArticlePolicy < ApplicationPolicy
   attr_reader :user, :article
 
   def initialize(user, article)  #basic structure for every policy 
-    @user    = user
+    @user = user
     @article = article
   end
 
+  def create?
+    article.user == user
+  end
+
   def edit?
-    #Allow only logged in user to edit.
-  	article.user == user  
+    # user.admin? or not record.published?
+	  article.user == user #Allow only logged in user to edit. user on R is logged in. user on L created article
+	  #check for proper syntax
   end
 
   def update? 
-  	edit?
+	  article.user == user
   end
 
   def destroy?
-  	edit?
+	  article.user == user
   end
 end
-
-
