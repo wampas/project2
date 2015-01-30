@@ -1,0 +1,8 @@
+<%= form_for @comment, :url => new_article_comment_path, :html => { :multipart => true } do |a| %>
+<div class="form-group">
+  <%= a.label :body %>
+  <%= a.text_field :body %>
+</div>
+
+<%= a.submit 'Submit' %>
+<% end %>
