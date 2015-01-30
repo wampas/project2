@@ -1,17 +1,30 @@
 <h1><%= @article.title %></h1>
 
-
+<!-- Location Info -->
 <p><%= @article.location %></p>
 <%= image_tag @article.image.url(:medium) %>
+<!-- Article -->
+<div class="article">
+	<p><%= @article.body %></p>
+</div>
 
-<p>
-  <%= @article.body %>
-</p>
+<div class="edit-article">
+	<p>
+	<% if policy(@article).edit? %>
+		<%= link_to "Edit ", edit_article_path(@article), class: "btn btn-info" %>
+	<% end %>
+	
+	<% if policy(@article).destroy? %>
+		<%= link_to "Delete ", @article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+	<% end %>
+	</p>
+</div>
 
+<!-- Navigation -->
 <p>
 <%= link_to "Previous Page", articles_path, class: "btn btn-default" %>
 </p>
-
+<!-- Comments table -->
 <div class="comments col-sm-8">
 <table class="table">
 	<tr>
@@ -30,11 +43,3 @@
 		<%= render 'comment_form' %>
 	</p>	
 </div>
-
-<% if policy(@article).edit? %>
-	<%= link_to "Edit ", edit_article_path(@article), class: "btn btn-info" %>
-<% end %>
-
-<% if policy(@article).destroy? %>
-	<%= link_to "Delete ", @article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-<% end %>
