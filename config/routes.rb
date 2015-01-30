@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   
   # Devise config
   devise_for :users, :controllers => {:registrations => "registrations"}
+  
 
   # Resources
   resources :articles do

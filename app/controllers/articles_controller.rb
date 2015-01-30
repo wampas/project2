@@ -19,13 +19,22 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
+		# render plain: params[:article].inspect
 		@article = Article.new(article_params) 
-		
-		if @article.save 
-			redirect_to @article 
+		if @article.save # if article is sucessfully saved,...
+			redirect_to @article # then redirect to that article...
 		else
-			render :new 
+			flash[:error] = @article.errors.full_messages.to_sentence
+			render :new # otherwise, render the form again, so user can correct mistakes
 		end
+		# @article = Article.new(article_params)
+		# @article.user = current_user
+		
+		# if @article.save 
+		# 	redirect_to @article 
+		# else
+		# 	render :new p
+		# end
 	end
 
 	def show
@@ -39,14 +48,21 @@ class ArticlesController < ApplicationController
 	def update
 		# @article = Article.find(find_article)
 		authorize @article
-		@article.update(article_params)
-		respond_with(@article)
-		# if @article.update_attributes(article_params)
+		if @article.update(article_params)
+			redirect_to @article
+		# respond_with(@article)
+		# # if @article.update_attributes(article_params)
 		# 	redirect_to @article
-		# else
-		# 	render :edit
-		# end
+		else
+			render :edit
+		end
 	end
+
+	def destroy
+		@article.destroy
+	end
+end
+
 
 private
 
@@ -58,5 +74,9 @@ def find_article
 	@article = Article.find(params[:id])
 end
 
-end
+
+
+
+
+
 

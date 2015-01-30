@@ -2,8 +2,11 @@
 
 <p>
   <ul>
-    <% @articles.each do |a| %>
-    <li><%= link_to a.title, article_path(a.id.to_s) %></li>
+    <% @articles.each do |article| %>
+      <li id="article_id-<%= article.id %>">
+        <%= link_to article.title, article %>
+        <%= link_to 'Delete', article_path(article), method: :delete, remote: true %>
+      </li>
     <% end %>
   </ul>
 </p>

@@ -1,3 +1,19 @@
-<h1>hi</h1>
 
-<%= image_tag @user.avatar.url %>
+<h3>User: <%= @user.email %></h3>
+<!-- <h4>Email: <%= @user.email %> </h4> -->
+
+
+<%= image_tag @user.avatar.url(:medium) %>
+
+<br>
+
+<%= link_to "Back", :back %>
+<% if user_signed_in? %>
+		<ul> 
+        <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: 'DELETE' %></li>
+        </ul> 
+ <% end %>
+
+<h3>My Articles:</h3><li><%= @article %></li>
+

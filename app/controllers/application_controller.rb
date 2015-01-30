@@ -12,4 +12,14 @@ class ApplicationController < ActionController::Base
 	  devise_parameter_sanitizer.for(:sign_up) << :avatar
 	  devise_parameter_sanitizer.for(:account_update) << :avatar
 	end
+
+
+  # def after_sign_in_path (resource)
+  #   user_path(resource.id)
+  # # end
+
+  # def after_update_path_for(resource)
+  #     user_path(resource.id)
+  # end
+
 end
