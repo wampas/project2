@@ -1,3 +1,11 @@
-<p>
-	<%= comment.body %>
-</p>
+<tr>
+	<td>
+		<%= comment.body %>
+	</td>
+	<td>
+		<span><%= link_to 'X', [comment.article, comment],
+					method: :delete,
+					data: { confirm: "Are you sure?" },
+					class: "btn btn-danger" %></span>
+	</td>
+</tr>

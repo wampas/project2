@@ -2,24 +2,37 @@
 
 
 <p><%= @article.location %></p>
-<%= image_tag @article.image.url %>
+<%= image_tag @article.image.url(:medium) %>
 
 <p>
   <%= @article.body %>
 </p>
-<div>
-<%= render @article.comments %>
-</div>
-<p>
-<%= render 'comment_form' %>
-</p>
 
-<%= link_to "Back", articles_path %>
+<p>
+<%= link_to "Previous Page", articles_path, class: "btn btn-default" %>
+</p>
+<table class="table">
+	<tr>
+		<caption>
+			<% flash.each do |key, value| %>
+    		<div class="alert alert-<%= key %> margin animated fadeOut"><%= value %></div>
+ 			<% end %>
+		</caption>
+		<th>Comments</th>
+	</tr>
+	<%= render @article.comments %>	
+</table>
+
+<div class="col-sm-6">
+	<p>
+		<%= render 'comment_form' %>
+	</p>	
+</div>
 
 <% if policy(@article).edit? %>
-	<%= link_to "Edit ", edit_article_path(@article) %>
+	<%= link_to "Edit ", edit_article_path(@article), class: "btn btn-info" %>
 <% end %>
 
 <% if policy(@article).destroy? %>
-	<%= link_to "Delete ", @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%= link_to "Delete ", @article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
 <% end %>

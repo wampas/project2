@@ -19,7 +19,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		# render plain: params[:article].inspect
 		@article = Article.new(article_params) 
 		if @article.save # if article is sucessfully saved,...
 			redirect_to @article # then redirect to that article...
@@ -27,14 +26,6 @@ class ArticlesController < ApplicationController
 			flash[:error] = @article.errors.full_messages.to_sentence
 			render :new # otherwise, render the form again, so user can correct mistakes
 		end
-		# @article = Article.new(article_params)
-		# @article.user = current_user
-		
-		# if @article.save 
-		# 	redirect_to @article 
-		# else
-		# 	render :new p
-		# end
 	end
 
 	def show
