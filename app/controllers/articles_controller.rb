@@ -38,13 +38,10 @@ class ArticlesController < ApplicationController
 	end
 
 	def update
-		# @article = Article.find(find_article)
 		authorize @article
+		
 		if @article.update(article_params)
 			redirect_to @article
-		# respond_with(@article)
-		# # if @article.update_attributes(article_params)
-		# 	redirect_to @article
 		else
 			render :edit
 		end

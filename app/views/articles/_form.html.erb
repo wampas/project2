@@ -1,6 +1,6 @@
 <!-- Form -->
 
-<%= form_for @article, :url => articles_path, :html => { :multipart => true } do |a| %>
+<%= form_for @article, :html => { :multipart => true } do |a| %>
 
 <span class="input input--minoru">
 	<%= a.text_field :title, class: "input__field input__field--yoko", id: "input-16" %>
