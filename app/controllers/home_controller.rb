@@ -5,13 +5,12 @@ class HomeController < ApplicationController
   include HTTParty
   helper :home
 
-  @google = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='
-
   def index
     if params[:search] != nil
       @user_query = URI.encode(params[:search])
       @results    = GooglePlacesApi.query(@user_query)
   	end
+
     @locations = Article.pluck(:location).uniq
     # byebug
   end
@@ -21,6 +20,6 @@ class HomeController < ApplicationController
       @results = GooglePlacesApi.query(params[:search])
     end
       @details = GooglePlacesApi.details(params[:id])
-      #photos = GooglePlacesApi.photos(params[:id])
+      # @photos  = GooglePlacesApi.photos(:id)
   end
 end
