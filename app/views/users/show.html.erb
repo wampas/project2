@@ -15,5 +15,7 @@
         </ul> 
  <% end %>
 
-<h3>My Articles:</h3><li><%= @article %></li>
-
+<h3>My Articles:</h3>
+<% @user.articles.each do |r| %>
+<li><%= r.title %></li>
+<% end %>
