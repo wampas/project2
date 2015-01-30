@@ -1,8 +1,21 @@
 <!-- <h2>Edit <%= resource_name.to_s.humanize %></h2> -->
 
+<div class="container">    
+    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <div class="panel panel-info" >
+
+          <div class="panel-heading">
+              <div class="panel-title">Sign Up</div>
+          </div>     
+
+            <div style="padding-top:30px" class="panel-body" >
+
+            <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+
+
 <%= form_for @user, :url => users_path, :html => { :multipart => true } do |f| %>
-
-
+  
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -27,7 +40,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
+    <br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
