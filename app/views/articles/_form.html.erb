@@ -2,24 +2,6 @@
 
 <%= form_for @article, :html => { :multipart => true } do |a| %>
 
-<span class="input input--minoru">
-	<%= a.text_field :title, class: "input__field input__field--yoko", id: "input-16" %>
-	<label class="input__label input__label--yoko" for="input-16">
-		<span class="input__label-content input__label-content--yoko"><%= a.label :title %> </span>
-	</label>
-</span>
-
-<div class="bodytext">
-<span class="input input--minoru">
-	<%= a.text_area :body, class: "input__field input__field--yoko", id: "input-17" %>
-		<label class="input__label input__label--yoko" for="input-17" id="ryan">
-			<span class="input__label-content input__label-content--yoko"><%= a.label :body %></span>
-		</label>
-</span>
-</div>
-
-
-<br/>
 
 <span class="input input--minoru">
 	<%= a.text_field :location, class: "input__field input__field--yoko", id: "input-18" %>
@@ -28,10 +10,32 @@
 		</label>
 </span>
 
+<br/>
+
+<span class="input input--minoru">
+	<%= a.text_field :title, class: "input__field input__field--yoko", id: "input-16" %>
+	<label class="input__label input__label--yoko" for="input-16">
+		<span class="input__label-content input__label-content--yoko"><%= a.label :title %> </span>
+	</label>
+</span>
+
+<br/>
+
+<span class="input input--minoru">
+	<%= a.text_area :body, cols: "30", rows: "10", class: "input__field input__field--yoko", id: "input-17" %>
+	<label class="input__label input__label--yoko" for="input-17" id="ryan">
+		<span class="input__label-content input__label-content--yoko"><%= a.label :body %> </span>
+	</label>
+</span>
+
+
+<br/><br/>
 
 <div class="form-group">
   
-  <%= a.file_field :image %>
+  <div class="choose-image"><%= a.file_field :image %></div>
+
+  <div class="line-separator"></div>
   
   <span class="imagelabel"><%= a.label :image %></span>
 	
