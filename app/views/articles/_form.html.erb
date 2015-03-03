@@ -2,10 +2,10 @@
 
 <%= form_for @article, :html => { :multipart => true } do |a| %>
 
-
+	<%= a.hidden_field :google_id, :value => @google_id %>
 <span class="input input--minoru">
-	<%= a.text_field :location, class: "input__field input__field--yoko", id: "input-18" %>
-		<label class="input__label input__label--yoko" for="input-18">
+	<%= a.text_field :location, class: "input__field input__field--yoko", id: "placeName", :value => @details['result']['address_components'][2]["long_name"] + ", " + @details['result']['address_components'][3]["short_name"] %>
+		<label class="input__label input__label--yoko" for="placeName">
 			<span class="input__label-content input__label-content--yoko"><%= a.label :location %></span>
 		</label>
 </span>

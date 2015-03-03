@@ -5,7 +5,7 @@
 <%= image_tag @article.image.url(:medium) %>
 <!-- Article -->
 <div class="article">
-	<p><%= @article.body %></p>
+	<p><%= simple_format @article.body %></p>
 </div>
 
 <div class="edit-article">
@@ -23,6 +23,9 @@
 <!-- Navigation -->
 <p>
 <%= link_to "Previous Page", articles_path, class: "btn btn-default" %>
+</p>
+<p>Have you visited here too? 
+<%= link_to 'Write about it!', new_loc_path(@article.google_id) %>
 </p>
 <!-- Comments table -->
 <div class="comments col-sm-8">
