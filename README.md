@@ -12,6 +12,7 @@ Check the Trello board for the most recent updates and planning for on-going wor
 * Run `bundle install`
 * Run `rake db:schema:load` for <b>NEW</b> installs only.
 * Run `rake db:migrate` to update database between pulls.
+* Run 'rake db:seed' to populate the site with fake articles and users. Old users will not be removed.
 
 The following gems require configuration: rspec, capybara, devise
 
