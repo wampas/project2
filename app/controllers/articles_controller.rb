@@ -18,7 +18,8 @@ class ArticlesController < ApplicationController
 		@article = Article.new
 
 		@google_id = params[:id]
-		byebug
+		@details = GooglePlacesApi.details(params[:id])
+    # byebug
 	end
 
 	def create
