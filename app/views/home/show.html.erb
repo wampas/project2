@@ -1,4 +1,4 @@
-<h1><%= @details['result']['name'] %></h1>
+<h1 id="locationName"><%= @details['result']['name'] %></h1>
 <div class="col-sm-6">
 	<p><%= @details['result']['formatted_address'] %></p>
 	<p>
@@ -15,7 +15,7 @@
 	</p>
 </div>
 <p>
-	<span><%= link_to "Add Article", new_article_path, class: "btn btn-info" %></span>
+	<span><%= link_to "Add Article", new_loc_path(@loc), class: "btn btn-info" %></span>
 </p>
 
 <div class="">

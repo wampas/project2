@@ -5,13 +5,19 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
-
+  # before_filter :set_location
+  
+  def set_location(query, id)
+    @places_query = query
+    @places_id    = id 
+  end
+  
   protected
 
   def configure_permitted_parameters
-	  devise_parameter_sanitizer.for(:sign_up) << :avatar
-	  devise_parameter_sanitizer.for(:account_update) << :avatar
-	end
+    devise_parameter_sanitizer.for(:sign_up) << :avatar
+    devise_parameter_sanitizer.for(:account_update) << :avatar
+  end
 
 
   # def after_sign_in_path (resource)

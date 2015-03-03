@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'home/index'
   get 'home/show' => 'home#show'
+  get 'articles/new/:id' => 'articles#new', as: :new_loc
   
   # Devise config
   devise_for :users, :controllers => {:registrations => "registrations"}

@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
 	
 	def index		
 		if params[:location].present?
-			# Strip string of url encoding such as + signs where spaces should be
+			# Strip url encoding from string and filter DB query with it
 			@decoded 	= URI.decode(params[:location])
 			@articles = Article.where(location: @decoded)
 		else
@@ -16,17 +16,22 @@ class ArticlesController < ApplicationController
 
 	def new
 		@article = Article.new
+
+		@google_id = params[:id]
+		byebug
 	end
 
 	def create
 		@article = Article.new(article_params) 
 		@article.user = current_user
-		if @article.save # if article is sucessfully saved,...
-			redirect_to @article # then redirect to that article...
+		
+		if @article.save 
+			redirect_to @article 
 		else
 			flash[:error] = @article.errors.full_messages.to_sentence
-			render :new # otherwise, render the form again, so user can correct mistakes
+			render :new # Render the form again
 		end
+
 	end
 
 	def show
@@ -56,7 +61,7 @@ end
 private
 
 def article_params
-	params.require(:article).permit(:title, :body, :location, :image) 
+	params.require(:article).permit(:title, :body, :location, :image, :google_id) 
 end
 
 def find_article
