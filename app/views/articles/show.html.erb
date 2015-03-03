@@ -5,7 +5,7 @@
 <%= image_tag @article.image.url(:medium) %>
 <!-- Article -->
 <div class="article">
-	<p><%= @article.body %></p>
+	<p><%= simple_format @article.body %></p>
 </div>
 
 <div class="edit-article">
