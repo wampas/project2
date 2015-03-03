@@ -24,6 +24,9 @@
 <p>
 <%= link_to "Previous Page", articles_path, class: "btn btn-default" %>
 </p>
+<p>Have you visited here too? 
+<%= link_to 'Write about it!', new_loc_path(@article.google_id) %>
+</p>
 <!-- Comments table -->
 <div class="comments col-sm-8">
 <table class="table">

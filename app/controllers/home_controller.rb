@@ -12,21 +12,24 @@ class HomeController < ApplicationController
       @user_query = URI.encode(params[:search])
       @results    = GooglePlacesApi.query(@user_query)
   	end
-
     # Sidebar list of locations with articles published
     @locations = Article.pluck(:location).uniq
     
   end
 
-  def show
-    # Check URL for parameters and send them to Google
-    # if params[:search] != nil
-    #   @results = GooglePlacesApi.query(params[:search])
-    # end
-    
+  def show    
     # Query search result for details
     @details = GooglePlacesApi.details(params[:id])
     @loc = params[:id]
-    # byebug
+  end
+
+  def new
+    @place = GooglePlacesApi.new
+    
+    data = [params[:address], params[:city], params[:state]]
+    address = data.join(", ")
+
+    @address = URI.encode(address)
+    @geocode = GooglePlacesApi.geocode(@address)
   end
 end
